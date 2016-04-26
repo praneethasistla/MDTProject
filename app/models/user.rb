@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :inventories, :transactions
+  has_many :inventories
+  has_many :transactions
 
   has_secure_password
 
