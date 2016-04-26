@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Inventory:</strong>
+  <%= @inventory.inventory_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @inventory.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @inventory.description %>
+</p>
+
+<p>
+  <strong>Quantity original:</strong>
+  <%= @inventory.quantity_original %>
+</p>
+
+<p>
+  <strong>Quantity remaining:</strong>
+  <%= @inventory.quantity_remaining %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @inventory.supplier_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @inventory.date %>
+</p>
+
+<%= link_to 'Edit', edit_inventory_path(@inventory) %> |
+<%= link_to 'Back', inventories_path %>

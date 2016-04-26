@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transaction_id: 1
+  inventory_id: 1
+  date: 2016-04-26 14:02:08
+  supplier_id: 1
+  recipient_id: 1
+  quantity: 1
+  confirmed_supplier: false
+  confirmed_recipient: false
+
+two:
+  transaction_id: 1
+  inventory_id: 1
+  date: 2016-04-26 14:02:08
+  supplier_id: 1
+  recipient_id: 1
+  quantity: 1
+  confirmed_supplier: false
+  confirmed_recipient: false

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Transaction:</strong>
+  <%= @transaction.transaction_id %>
+</p>
+
+<p>
+  <strong>Inventory:</strong>
+  <%= @transaction.inventory_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @transaction.date %>
+</p>
+
+<p>
+  <strong>Supplier:</strong>
+  <%= @transaction.supplier_id %>
+</p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @transaction.recipient_id %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @transaction.quantity %>
+</p>
+
+<p>
+  <strong>Confirmed supplier:</strong>
+  <%= @transaction.confirmed_supplier %>
+</p>
+
+<p>
+  <strong>Confirmed recipient:</strong>
+  <%= @transaction.confirmed_recipient %>
+</p>
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>

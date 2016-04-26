@@ -11,6 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20160426180521) do
+
+  create_table "inventories", force: :cascade do |t|
+    t.integer  "inventory_id"
+    t.string   "name"
+    t.string   "description"
+    t.integer  "quantity_original"
+    t.integer  "quantity_remaining"
+    t.integer  "supplier_id"
+    t.datetime "date"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.integer  "transaction_id"
+    t.integer  "inventory_id"
+    t.datetime "date"
+    t.integer  "supplier_id"
+    t.integer  "recipient_id"
+    t.integer  "quantity"
+    t.boolean  "confirmed_supplier"
+    t.boolean  "confirmed_recipient"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "username"
+    t.string   "name"
+    t.string   "address"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "contact_name"
+    t.string   "contact_title"
+    t.string   "phone"
+    t.integer  "user_type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
 end
