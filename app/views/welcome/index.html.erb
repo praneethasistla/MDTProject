@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <title>MDT Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- attach CSS styles -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <!--  BODY PAGE CONTENT -->
+  
+  
+  <!-- navigation panel -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+	  Go-cery
+	  </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbar-collapse-main">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#login">Login</a></li>
+		<li><a href="#" data-toggle="modal" data-target="#signup">Sign up</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div id="login" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Login</h4>
+		  </div>
+		  <div class="modal-body">
+			<form role="form">
+				<div class="form-group">
+				  <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+				  <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+				</div>
+				<div class="form-group">
+				  <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+				  <input type="text" class="form-control" id="psw" placeholder="Enter password">
+				</div>
+				<div class="checkbox">
+				  <label><input type="checkbox" value="" checked>Remember me</label>
+				</div>
+				<button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+			</form>
+		  </div>
+		  <div class="modal-footer">
+			<button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+			  <p>Not a member? <a href="#">Sign Up</a></p>
+			  <p>Forgot <a href="#">Password?</a></p>
+		  </div>
+		</div>
+
+	  </div>
+</div>
+<div id="signup" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+		  <div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">&times;</button>
+			<h4 class="modal-title">Sign up</h4>
+		  </div>
+		  <div class="modal-body">
+			<ul class="nav nav-tabs">
+				<li class="active inactive-tab">
+					<a data-toggle="tab" href="#supplier">Supplier</a>
+				</li>
+				<li class="inactive-tab">
+					<a data-toggle="tab" href="#charity">Charity</a>
+				</li>
+			</ul>
+			<div class="tab-content">
+			<br>
+				<div id="supplier" class="tab-pane fade in active">
+					<form role="form">
+						<div class="form-group">
+						  <label for="usrname"><%= image_tag "group.png" %> Supplier</label>
+						  <input type="text" class="form-control" id="usrname" placeholder="Enter name of charity">
+						</div>
+						<div class="form-group">
+						  <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+						  <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+						</div>
+						<div class="form-group">
+						  <label for="usrname"><%= image_tag "map.png" %> Location</label>
+						  <input type="text" class="form-control" id="usrname" placeholder="Charity address">
+						</div>
+						<div class="form-group">
+						  <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email</label>
+						  <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+						</div>
+						<div class="form-group">
+						  <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+						  <input type="text" class="form-control" id="psw" placeholder="Enter password">
+						</div>
+						<div class="form-group">
+						  <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Re-enter Password</label>
+						  <input type="text" class="form-control" id="psw" placeholder="Re-enter password">
+						</div>
+						<div class="checkbox">
+						  <label><input type="checkbox" value="" checked>Remember me</label>
+						</div>
+						<button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Sign up</button>
+					</form>
+				</div>
+				<div id="charity" class="tab-pane fade">
+					<form role="form">
+						<div class="form-group">
+						  <label for="usrname"><%= image_tag "group.png" %> Charity</label>
+						  <input type="text" class="form-control" id="usrname" placeholder="Enter name of charity">
+						</div>
+						<div class="form-group">
+						  <label for="usrname"><%= image_tag "map.png" %> Location</label>
+						  <input type="text" class="form-control" id="usrname" placeholder="Charity address">
+						</div>
+						<div class="form-group">
+						  <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email</label>
+						  <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+						</div>
+						<div class="form-group">
+						  <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+						  <input type="text" class="form-control" id="psw" placeholder="Enter password">
+						</div>
+						<div class="form-group">
+						  <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Re-enter Password</label>
+						  <input type="text" class="form-control" id="psw" placeholder="Re-enter password">
+						</div>
+						<div class="checkbox">
+						  <label><input type="checkbox" value="" checked>Remember me</label>
+						</div>
+						<button type="submit" class="btn btn-default btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Sign up</button>
+					</form>
+				</div>
+			</div>
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		  </div>
+		</div>
+
+	  </div>
+</div>
+
+<!-- first section - Home -->
+<div id="home" class="home">
+  <div class="text-vcenter">
+	<%= image_tag "logo.jpg", alt: "Chania", width: "300", height: "100" %>	
+	  <div class="subtitle">
+    <h3>Don't weed it&hellip;Someone needs it</h3>
+	</div>
+    <a href="#about" class="btn btn-default btn-lg">Continue</a>
+  </div>
+</div>
+<!-- /first section -->
+
+<!-- second section - About -->
+<div id="about" class="pad-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <%= image_tag "logo.jpg", alt: "" %>
+      </div>
+      <div class="col-sm-6 text-center">
+        <h2>About the Project</h2>
+        <h5 >
+		We connect those who have excess produce inventory to those who most need it, leading to an efficient, greener and more caring society!
+		<br> 
+		<br>
+			We have been featured in leading media portals and have been described by many to be leading a wonderful initiative for the society where everyone turns out a winner. Several leading retail institutions such Aldi, Giant Eagle, Whole Foods Market and Trader Joes have already tied up with us and couldn’t be any happier with the results. 
+		</h5>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /second section -->
+
+
+<!-- third section - Services -->
+<div id="services" class="pad-section">
+  <div class="container">
+    <h2 class="text-center">Our Partners</h2> <hr />
+    <div class="row text-center">
+      <div class="col-sm-3">
+		<%= image_tag "gianteagle.jpg", alt: "", class: "sponsor" %>
+		<h4>Giant Eagle</h4>
+        <p>Donated approximately 1000 USD worth of food to various charities in the Pittsburgh region.</p>
+      </div>
+      <div class="col-sm-3">
+	  <%= image_tag "aldi.png", alt: "", class: "sponsor" %>
+		<h4>Aldi</h4>
+        <p>Been an active supplier for over 2 years and donated to a number of local charities</p>
+      </div>
+      <div class="col-sm-3">
+        <%= image_tag "wholefoods.jpg", alt: "", class: "img-responsive sponsor" %>
+        <h4>Whole Foods</h4>
+        <p>One of the major donor of vegetables in the past 3 years</p>
+      </div>
+      <div class="col-sm-3">
+        <%= image_tag "tjoes.jpg", alt: "", class: "img-responsive sponsor" %>
+        <h4>Trader Joe's</h4>
+        <p>Donated to more than 5 charities</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /third section -->
+
+<!-- footer -->
+<footer>
+  <hr />
+  <div class="container">
+    <p class="text-right">Copyright &copy; MDT Project 2016</p>
+  </div>
+</footer>
+<!-- /footer -->
+
+
+</body>
+</html>
